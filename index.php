@@ -1,98 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+<html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Danh Mục Bài Tập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-	<?php
-	echo("Cau 1: ");
-		$random = rand(1, 100);
-		echo(" Con so ramdom : {$random} <br>");
-		for ($i = 0; $i <= $random; $i++) {
-			if ($i %2== 0) {
-				echo("$i   ");
-			}
-		}
-		echo("<br>");
-	?>
-<table>
-		<tr>
-			<?php 
-				for($i = 1; $i <= 10; $i++){
-					echo "<th>Chương $i</th>";
-				}
-			?>
-		</tr>
-		<tr>
-			<?php
-				for($i =1; $i<=10;$i++){
-                    for($j = 1; $j <= 10; $j++){
-                        echo "<td>$i x $j = " . ($i * $j) . "</td>";
-                    }
-                    echo "</tr><tr>";
-                } 
-			 ?>
-		</tr>
-	</table>
 
-	<?php
-		echo("Cau 3 - Con so ramdom la : ");
-		$n = 25; //rand(-100, 100);
-		echo("$n");
-		if($n>0){
-			echo("<br>N la so duong <br>");
-			echo("Uoc cua N : ");
-			for($i = 1; $i<=$n; $i++){
-				if($n%$i == 0){
-					echo("$i  ");
-				}
-			}
-			echo("<br>Nó có phải số nguyên tố không? : ");
-			for($i = 2; $i<$n; $i++){
-				if($n%$i == 0){
-					echo("Không");
-					break;
-				}	
-			}
-			echo("<br>Tính tổng số nguyên tố? : ");
-			$tong = 0;
-			for($i = 2; $i<$n; $i++){
-				$laSNT = true;
-				for($j = 2; $j<$i; $j++){
-					if($i%$j == 0){
-						$laSNT = false;
-						break;
-					}
-				}
-				if ($laSNT) {
-        			$tong += $i;
-    			}
-			}
-			echo "$tong";
-			echo("<br>N có phải số chính phương không? : ");
-			if(sqrt($n)==(int)sqrt($n))
-                echo " $n là số chính phương";
+    <h1>Danh Sách Các Bài Thực Hành</h1>
+    <p>Chọn liên kết bên dưới để truy cập vào các trang tương ứng:</p>
 
-		}
-	?>
+    <ul>
+        <li>
+            <a href="Bai1.php">Bài tập 1</a>
+        </li>
+        <li>
+            <a href="Bai2.php">Bài tập 2 </a>
+        </li>
+        <li>
+            <a href="Bai3.php">Bài tập 3</a>
+        </li>
+		<li>
+            <a href="Login.php">Bài tập đăng nhập</a>
+        </li>
+		<li>
+            <a href="Form.php">Bài tập đăng nhập</a>
+        </li>
+    </ul>
+
 </body>
 </html>
